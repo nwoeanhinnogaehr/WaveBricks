@@ -831,7 +831,7 @@ class instrument{
             //data=data;
             for(float i = step*(44100*(60/tempo));i<sizeSS;(i)++){
                 //cout<<"\nattempting transfer at "<<i;
-                data[(short)i] += (ampadj*(((sin(((freq*2.0*M_PI)/44100*i)*phase+((freq*2.0*M_PI)/44100*i)*(fm*sin((fmfreq*2.0*M_PI)/44100*i))))
+                data[(int)i] += (ampadj*(((sin(((freq*2.0*M_PI)/44100*i)*phase+((freq*2.0*M_PI)/44100*i)*(fm*sin((fmfreq*2.0*M_PI)/44100*i))))
                                             +(sin(((freq*2.0*M_PI)/44100*i)+((freq*2.0*M_PI)/44100*i)*(fm*sin((fmfreq*2.0*M_PI)/44100*i))))
                                             *(sin((amfreq*2.0*M_PI)/44100*i)*am))));
             }
